@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>东软10组_车险管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>130</y>
+      <width>391</width>
+      <height>281</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="Main_MenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>934</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="Main_InfoQueryMenu">
+    <property name="title">
+     <string>信息查询</string>
+    </property>
+    <addaction name="Main_WarrantyQueryAction"/>
+    <addaction name="Main_RiskQueryAction"/>
+    <addaction name="Main_DamageQueryAction"/>
+    <addaction name="Main_ClaimQueryAction"/>
+    <addaction name="Main_IncQueryAction"/>
+   </widget>
+   <widget class="QMenu" name="Main_InsuranceSignMenu">
+    <property name="title">
+     <string>投保登记</string>
+    </property>
+    <addaction name="Main_WarrantSignAction"/>
+    <addaction name="Main_RiskSignAction"/>
+    <addaction name="Main_DamageSignAction"/>
+    <addaction name="Main_ClaimSignAction"/>
+    <addaction name="Main_IncSignAction"/>
+   </widget>
+   <widget class="QMenu" name="Main_ManageMenu">
+    <property name="title">
+     <string>保单管理</string>
+    </property>
+    <widget class="QMenu" name="Main_InfomationSearchMenu">
+     <property name="title">
+      <string>资料查看</string>
+     </property>
+     <addaction name="Main_WarrantSearchAction"/>
+     <addaction name="Main_RiskSearchAction"/>
+     <addaction name="Main_DamageSearchAction"/>
+     <addaction name="Main_ClaimSearchAction"/>
+     <addaction name="Main_IncSearchAction"/>
+    </widget>
+    <addaction name="Main_InfomationSearchMenu"/>
+    <addaction name="Main_OutputFileAction"/>
+   </widget>
+   <addaction name="Main_InfoQueryMenu"/>
+   <addaction name="Main_InsuranceSignMenu"/>
+   <addaction name="Main_ManageMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="Main_WarrantSignAction">
+   <property name="text">
+    <string>保单登记</string>
+   </property>
+  </action>
+  <action name="Main_RiskSignAction">
+   <property name="text">
+    <string>出险登记</string>
+   </property>
+  </action>
+  <action name="Main_DamageSignAction">
+   <property name="text">
+    <string>定损登记</string>
+   </property>
+  </action>
+  <action name="Main_ClaimSignAction">
+   <property name="text">
+    <string>理赔登记</string>
+   </property>
+  </action>
+  <action name="Main_IncSignAction">
+   <property name="text">
+    <string>承保公司登记</string>
+   </property>
+  </action>
+  <action name="Main_WarrantyQueryAction">
+   <property name="text">
+    <string>保单查询</string>
+   </property>
+  </action>
+  <action name="Main_RiskQueryAction">
+   <property name="text">
+    <string>出险查询</string>
+   </property>
+  </action>
+  <action name="Main_DamageQueryAction">
+   <property name="text">
+    <string>定损查询</string>
+   </property>
+  </action>
+  <action name="Main_ClaimQueryAction">
+   <property name="text">
+    <string>理赔查询</string>
+   </property>
+  </action>
+  <action name="Main_IncQueryAction">
+   <property name="text">
+    <string>承保公司查询</string>
+   </property>
+  </action>
+  <action name="Main_WarrantSearchAction">
+   <property name="text">
+    <string>保单信息</string>
+   </property>
+  </action>
+  <action name="Main_RiskSearchAction">
+   <property name="text">
+    <string>出险信息</string>
+   </property>
+  </action>
+  <action name="Main_DamageSearchAction">
+   <property name="text">
+    <string>定损单信息</string>
+   </property>
+  </action>
+  <action name="Main_ClaimSearchAction">
+   <property name="text">
+    <string>全部理赔信息</string>
+   </property>
+  </action>
+  <action name="Main_IncSearchAction">
+   <property name="text">
+    <string>承保公司信息</string>
+   </property>
+  </action>
+  <action name="Main_OutputFileAction">
+   <property name="text">
+    <string>导出文件（待完善）</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
