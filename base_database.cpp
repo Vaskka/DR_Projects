@@ -132,6 +132,7 @@ vector<QuerySet> base_database::doSelectQuery(string sql)
 
 void base_database::doUpdateQuery(string sql)
 {
+    cout << sql << endl;
     MYSQL mysql;
     mysql_init(&mysql);
     mysql_real_connect(&mysql, this->host.c_str(), this->user.c_str(), this->password.c_str(), this->database.c_str(), (unsigned int)this->port, NULL, 0);

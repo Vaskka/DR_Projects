@@ -1,12 +1,14 @@
 #include "insertexecuter.h"
 #include "logindialog.h"
-#include "mymainwindow.h"
+#include "mainwindow.h"
 #include "queryset.h"
 #include "selectexecuter.h"
 #include "ui_logindialog.h"
+#include "user.h"
 #include <string>
 #include <sstream>
 #include <qmessagebox.h>
+#include <QDebug>
 
 /**
  * @brief L for debug
@@ -50,32 +52,39 @@ void LoginDialog::on_Login_LoginButton_clicked()
     QString number = this->ui->Login_UserNumberEdit->text();
     QString password = this->ui->Login_UserPasswordEdit->text();
 
+    qDebug() << Constant::host.c_str();
+    qDebug() << Constant::database.c_str();
 
-    SelectExecuter sel = SelectExecuter("sys_employeeinfo");
+    qDebug() << Constant::password.c_str();
+    qDebug() << Constant::user.c_str();
+    qDebug() << Constant::port;
 
-    sel.filter.addFilter("EmployeeCode", number.toStdString());
-    sel.filter.addFilter("Password", password.toStdString());
+    SelectExecuter sel = SelectExecuter("user_info");
+
+    sel.filter.addFilter("user_name", number.toStdString());
+    sel.filter.addFilter("password", password.toStdString());
 
 
     vector<QuerySet> result = sel.doSelect();
 
     if (result.size() >= 1) {
-        string name = result[0]["EmployeeName"];
-        int access = 0;
-        if (number == "root")
+        string name = result[0]["user_name"];
+        int access = 1;
+        if (QString::fromStdString(result[0]["authority"]).toInt() == 0)
         {
-            access = 1;
+            // root 权限
+            access = 0;
         }
 
 
         User *user = new User(name, number.toStdString(), access);
-        MyMainWindow *main = new MyMainWindow(user, this);
+        MainWindow *main = new MainWindow(this, user);
         main->show();
 
         this->hide();
     }
     else {
-        QMessageBox::information(nullptr, "登陆失败", "用户名或密码错误", QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+        QMessageBox::information(this, "登陆失败", "用户名或密码错误", QMessageBox::Ok, QMessageBox::Ok);
         return;
     }
 

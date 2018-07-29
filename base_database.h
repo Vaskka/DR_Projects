@@ -5,6 +5,7 @@
 #include <mysql/mysql.h>
 #include "queryset.h"
 #include <vector>
+
 using namespace std;
 
 class base_database

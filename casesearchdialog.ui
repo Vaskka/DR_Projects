@@ -25,21 +25,14 @@
    <property name="text">
     <string>查询</string>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_17">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>310</y>
-     <width>201</width>
-     <height>31</height>
-    </rect>
+   <property name="default">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_16">
+  <widget class="QLineEdit" name="Main_CarNumberEdit">
    <property name="geometry">
     <rect>
-     <x>500</x>
+     <x>510</x>
      <y>220</y>
      <width>201</width>
      <height>31</height>
@@ -111,6 +104,32 @@
    </property>
    <property name="text">
     <string>出险情况信息查询</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="Main_CaseDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>300</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy-M-d</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="Main_Dateable">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>300</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>同时使用时间查询</string>
    </property>
   </widget>
  </widget>

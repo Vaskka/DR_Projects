@@ -6,22 +6,64 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>934</width>
-    <height>630</height>
+    <width>1062</width>
+    <height>755</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>东软10组_车险管理系统</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="Main_InfoShowTable">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>130</y>
-      <width>391</width>
-      <height>281</height>
+      <x>20</x>
+      <y>100</y>
+      <width>1031</width>
+      <height>591</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Main_TableTitle">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>30</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TableTitle</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Main_SaveChangeButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存修改</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Main_DeleteSelectionButton">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>40</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>删除选中</string>
     </property>
    </widget>
   </widget>
@@ -30,7 +72,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>934</width>
+     <width>1062</width>
      <height>32</height>
     </rect>
    </property>
@@ -49,9 +91,6 @@
      <string>投保登记</string>
     </property>
     <addaction name="Main_WarrantSignAction"/>
-    <addaction name="Main_RiskSignAction"/>
-    <addaction name="Main_DamageSignAction"/>
-    <addaction name="Main_ClaimSignAction"/>
     <addaction name="Main_IncSignAction"/>
    </widget>
    <widget class="QMenu" name="Main_ManageMenu">
@@ -71,9 +110,27 @@
     <addaction name="Main_InfomationSearchMenu"/>
     <addaction name="Main_OutputFileAction"/>
    </widget>
+   <widget class="QMenu" name="Main_SignDamage">
+    <property name="title">
+     <string>出险定损</string>
+    </property>
+    <addaction name="Main_CaseSign"/>
+    <addaction name="Main_DamageSign"/>
+    <addaction name="Main_ClaimSign"/>
+   </widget>
+   <widget class="QMenu" name="EmployeeMenu">
+    <property name="title">
+     <string>员工操作</string>
+    </property>
+    <addaction name="EmployeeQueryAction"/>
+    <addaction name="EmployeeInsertAction"/>
+    <addaction name="EmployeeShowAllAction"/>
+   </widget>
    <addaction name="Main_InfoQueryMenu"/>
    <addaction name="Main_InsuranceSignMenu"/>
    <addaction name="Main_ManageMenu"/>
+   <addaction name="Main_SignDamage"/>
+   <addaction name="EmployeeMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="Main_WarrantSignAction">
@@ -122,8 +179,14 @@
    </property>
   </action>
   <action name="Main_IncQueryAction">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>承保公司查询</string>
+   </property>
+   <property name="shortcutVisibleInContextMenu">
+    <bool>false</bool>
    </property>
   </action>
   <action name="Main_WarrantSearchAction">
@@ -154,6 +217,51 @@
   <action name="Main_OutputFileAction">
    <property name="text">
     <string>导出文件（待完善）</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>出险登记</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>定损登记</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>理赔登记</string>
+   </property>
+  </action>
+  <action name="Main_CaseSign">
+   <property name="text">
+    <string>出险登记</string>
+   </property>
+  </action>
+  <action name="Main_DamageSign">
+   <property name="text">
+    <string>定损登记</string>
+   </property>
+  </action>
+  <action name="Main_ClaimSign">
+   <property name="text">
+    <string>理赔登记</string>
+   </property>
+  </action>
+  <action name="EmployeeQueryAction">
+   <property name="text">
+    <string>员工查询</string>
+   </property>
+  </action>
+  <action name="EmployeeInsertAction">
+   <property name="text">
+    <string>员工登记</string>
+   </property>
+  </action>
+  <action name="EmployeeShowAllAction">
+   <property name="text">
+    <string>显示全部</string>
    </property>
   </action>
  </widget>

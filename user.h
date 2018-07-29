@@ -35,8 +35,8 @@ public:
 
     /**
      * 权限
-     * 0 : 普通用户
-     * 1 : root用户
+     * 1 : 普通用户
+     * 0 : root用户
      * @brief access
      */
     int access = 0;

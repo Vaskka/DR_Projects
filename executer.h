@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "base_database.h"
+#include "constant.h"
 #include "executer_filter.h"
 #include "queryset.h"
 using namespace std;
@@ -16,7 +17,7 @@ public:
     Executer(string table);
     string table;
 
-    base_database *maker = new base_database("127.0.0.1", "0000", 3306, "test", "carinsurancessystem");
+    base_database *maker = new base_database(Constant::host, Constant::password, Constant::port, Constant::user, Constant::database);
 
     // 过滤器
     Executer_Filter filter;

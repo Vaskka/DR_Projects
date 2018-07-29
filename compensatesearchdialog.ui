@@ -43,6 +43,9 @@
    <property name="text">
     <string>查询</string>
    </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
@@ -72,10 +75,10 @@
     </font>
    </property>
    <property name="text">
-    <string>理赔信息查询</string>
+    <string>定损信息查询</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_16">
+  <widget class="QLineEdit" name="Main_CarNumberEdit">
    <property name="geometry">
     <rect>
      <x>420</x>
@@ -85,7 +88,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_17">
+  <widget class="QLineEdit" name="Main_NumberEdit">
    <property name="geometry">
     <rect>
      <x>420</x>

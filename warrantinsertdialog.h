@@ -15,6 +15,13 @@ public:
     explicit WarrantInsertDialog(QWidget *parent = nullptr);
     ~WarrantInsertDialog();
 
+private slots:
+    void on_Main_CommitButton_3_clicked();
+
+    void on_Main_CommitButton_2_clicked();
+
+    void on_Main_CommitButton_clicked();
+
 private:
     Ui::WarrantInsertDialog *ui;
 };

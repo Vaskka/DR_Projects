@@ -26,9 +26,7 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    mymainwindow.cpp \
     user.cpp \
-    utils.cpp \
     base_database.cpp \
     queryset.cpp \
     executer.cpp \
@@ -43,11 +41,18 @@ SOURCES += \
     casesearchdialog.cpp \
     claimsearchdialog.cpp \
     compensatesearchdialog.cpp \
-    incsearchdialog.cpp
+    incsearchdialog.cpp \
+    utils.cpp \
+    caseinsertdialog.cpp \
+    claiminsertdialog.cpp \
+    compeninsertdialog.cpp \
+    incinsertdialog.cpp \
+    employeequerydialog.cpp \
+    employeeinsertdialog.cpp \
+    constant.cpp
 
 HEADERS += \
         mainwindow.h \
-    mymainwindow.h \
     user.h \
     base_database.h \
     queryset.h \
@@ -63,7 +68,15 @@ HEADERS += \
     casesearchdialog.h \
     claimsearchdialog.h \
     compensatesearchdialog.h \
-    incsearchdialog.h
+    incsearchdialog.h \
+    utils.h \
+    caseinsertdialog.h \
+    claiminsertdialog.h \
+    compeninsertdialog.h \
+    incinsertdialog.h \
+    employeequerydialog.h \
+    employeeinsertdialog.h \
+    constant.h
 
 FORMS += \
         mainwindow.ui \
@@ -73,7 +86,13 @@ FORMS += \
     casesearchdialog.ui \
     claimsearchdialog.ui \
     compensatesearchdialog.ui \
-    incsearchdialog.ui
+    incsearchdialog.ui \
+    caseinsertdialog.ui \
+    claiminsertdialog.ui \
+    compeninsertdialog.ui \
+    incinsertdialog.ui \
+    employeequerydialog.ui \
+    employeeinsertdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

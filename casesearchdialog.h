@@ -15,6 +15,9 @@ public:
     explicit CaseSearchDialog(QWidget *parent = nullptr);
     ~CaseSearchDialog();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::CaseSearchDialog *ui;
 };
