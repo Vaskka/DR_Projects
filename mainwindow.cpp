@@ -127,19 +127,22 @@ void MainWindow::drawInfoOnTableWidget(vector<QuerySet> info)
 void MainWindow::drawInfoOnTableWidgetWithOperator(vector<QuerySet> info)
 {
     this->drawInfoOnTableWidget(info);
-    // 双击编辑
-    ui->Main_InfoShowTable->setEditTriggers(QAbstractItemView::DoubleClicked);
-    // 显示保存更改 删除选中按钮
-    this->showChangeButton();
-    // 最后一列不能编辑
-    int cols = ui->Main_InfoShowTable->columnCount();
-    int rows = ui->Main_InfoShowTable->rowCount();
 
-    for (int i = 0; i < rows; i++)
+    if (info.size() != 0)
     {
-        ui->Main_InfoShowTable->item(i, cols - 1)->setFlags((ui->Main_InfoShowTable->item(i, cols - 1)->flags()) & (~Qt::ItemIsEditable));
-    }
+        // 双击编辑
+        ui->Main_InfoShowTable->setEditTriggers(QAbstractItemView::DoubleClicked);
+        // 显示保存更改 删除选中按钮
+        this->showChangeButton();
+        // 最后一列不能编辑
+        int cols = ui->Main_InfoShowTable->columnCount();
+        int rows = ui->Main_InfoShowTable->rowCount();
 
+        for (int i = 0; i < rows; i++)
+        {
+            ui->Main_InfoShowTable->item(i, cols - 1)->setFlags((ui->Main_InfoShowTable->item(i, cols - 1)->flags()) & (~Qt::ItemIsEditable));
+        }
+    }
 }
 
 /**

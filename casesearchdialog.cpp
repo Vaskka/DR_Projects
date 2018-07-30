@@ -41,3 +41,11 @@ void CaseSearchDialog::on_pushButton_clicked()
     MainWindow::currentTable = "case_reportcaseinfo";
     this->hide();
 }
+
+/**
+ * @brief CaseSearchDialog::on_pushButton_2_clicked 返回
+ */
+void CaseSearchDialog::on_pushButton_2_clicked()
+{
+    this->hide();
+}

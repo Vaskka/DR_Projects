@@ -112,7 +112,7 @@
    </widget>
    <widget class="QMenu" name="Main_SignDamage">
     <property name="title">
-     <string>出险定损</string>
+     <string>定损理赔</string>
     </property>
     <addaction name="Main_CaseSign"/>
     <addaction name="Main_DamageSign"/>
