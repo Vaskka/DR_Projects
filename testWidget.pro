@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui widgets
+QT +=  network
 LIBS += -lmysqlclient
 
 TARGET = testWidget
@@ -50,7 +51,11 @@ SOURCES += \
     employeequerydialog.cpp \
     employeeinsertdialog.cpp \
     constant.cpp \
-    queryresult.cpp
+    queryresult.cpp \
+    mydownloader.cpp \
+    outputmodel.cpp \
+    outputitem.cpp \
+    lookup.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -78,7 +83,11 @@ HEADERS += \
     employeequerydialog.h \
     employeeinsertdialog.h \
     constant.h \
-    queryresult.h
+    queryresult.h \
+    mydownloader.h \
+    outputmodel.h \
+    outputitem.h \
+    lookup.h
 
 FORMS += \
         mainwindow.ui \

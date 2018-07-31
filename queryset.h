@@ -1,6 +1,8 @@
 #ifndef QUERYSET_H
 #define QUERYSET_H
 
+#include "lookup.h"
+
 #include <string>
 #include <map>
 using namespace std;

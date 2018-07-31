@@ -10,6 +10,8 @@
 #include "incinsertdialog.h"
 #include "incsearchdialog.h"
 #include "mainwindow.h"
+#include "outputitem.h"
+#include "outputmodel.h"
 #include "selectexecuter.h"
 #include "ui_mainwindow.h"
 #include "updateexecuter.h"
@@ -48,12 +50,13 @@ void MainWindow::drawInfoOnTableWidget(vector<QuerySet> info)
 {
     this->emptyTable();
     if (info.size() == 0) {
-        ui->Main_TableTitle->setText("未查到任何内容");
+        ui->Main_TableTitle->setText(tr("未查到任何内容"));
         return;
     }
     else {
-        ui->Main_TableTitle->setText("查询结果");
+        ui->Main_TableTitle->setText(tr("查询结果"));
     }
+    LookUp trans;
     // 数据条数
     int nums = info.size();
     // 列数
@@ -108,7 +111,7 @@ void MainWindow::drawInfoOnTableWidget(vector<QuerySet> info)
     int count = 0;
     for (ite = info[0].getBegin(); ite != info[0].getEnd(); ite++)
     {
-        headerList << (ite->first).c_str();
+        headerList << (tr(trans.iterator(ite->first).c_str()));
         count++;
     }
 
@@ -496,7 +499,29 @@ void MainWindow::toSignEmployee()
  */
 void MainWindow::toOutputExcel()
 {
+    // 拿到查询执行器
+    SelectExecuter sel = SelectExecuter("insur_guaranteeslip");
+    vector<QuerySet> result = sel.doSelect();
 
+    // 构造输出模型
+    OutputModel output;
+
+    // 翻译器
+    LookUp trans;
+
+    for (int i = 0; i < result.size(); i++)
+    {
+        OutputItem item;
+        map<string, string>::iterator ite;
+        for (ite = result.at(i).getBegin(); ite != result.at(i).getEnd(); ite++)
+        {
+            //item.setValue(tr(trans.iterator(ite->first).c_str()), ite->second.c_str());
+            item.setValue("a", "b");
+        }
+        output.append(item.toString());
+    }
+
+    output.run("http://127.0.0.1:8000/api");
 }
 
 

@@ -96,12 +96,12 @@ void WarrantInsertDialog::on_Main_CommitButton_2_clicked()
     ui->Insert_VehicleLossPreEdit->clear();
     ui->Insert_WaterEdit->clear();
     ui->Insert_WaterPreEdit->clear();
+    ui->Insert_WarrantNumberEdit->clear();
 }
 
 void WarrantInsertDialog::on_Main_CommitButton_clicked()
 {
-    // 待完善保险算法
-
+    string warrantNumber = ui->Insert_WarrantNumberEdit->text().toStdString();
     string agent = ui->Insert_AgentEdit->text().toStdString();
     string brand =  ui->Insert_BrandEdit->text().toStdString();
     string commci =  ui->Insert_CommciEdit->text().toStdString();
@@ -307,6 +307,7 @@ void WarrantInsertDialog::on_Main_CommitButton_clicked()
     data.setValue("InsurancePremiumPorLossOfVehicle", vehicleLossPre);
     data.setValue("WaterLossInsurancePremium", waterPre);
     data.setValue("WaterLossInsurance", water);
+    data.setValue("WarrantNumber", warrantNumber);
 
     InsertExecuter ins = InsertExecuter("insur_guaranteeslip");
     QueryResult result = ins.doInsert(data);

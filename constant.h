@@ -17,6 +17,7 @@ public:
     static string user;
     static string database;
 
+
     /**
      * @brief loadConfig 加载配置
      */

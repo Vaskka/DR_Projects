@@ -92,7 +92,7 @@ bool Constant::checkPersonalNumber(string personalNumber)
 
 bool Constant::checkNumber(string num)
 {
-    if (getGroup(QString::fromStdString("^[\\d]{15}$"), QString::fromStdString(num), 0) != nullptr)
+    if (getGroup(QString::fromStdString("^([1-9]\\d*|[0]{1,1})$"), QString::fromStdString(num), 0) != nullptr)
     {
         return true;
     }

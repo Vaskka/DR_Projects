@@ -1,8 +1,12 @@
 #include "constant.h"
 #include "logindialog.h"
 #include "mainwindow.h"
+#include "mydownloader.h"
+#include "outputitem.h"
+#include "outputmodel.h"
 #include <QApplication>
 #include <QMessageBox>
+#include <QJsonDocument>
 
 int main(int argc, char *argv[])
 {
