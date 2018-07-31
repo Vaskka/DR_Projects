@@ -9,7 +9,7 @@ InsertExecuter::InsertExecuter(string table)
     this->table = table;
 }
 
-void InsertExecuter::doInsert(QuerySet row)
+QueryResult InsertExecuter::doInsert(QuerySet row)
 {
     // 得到格式化的列信息 数据信息
     string cols = "(";
@@ -35,5 +35,5 @@ void InsertExecuter::doInsert(QuerySet row)
 
     string result = "INSERT INTO " + this->table + " " + cols + " VALUES " + data + ";";
     cout << result;
-    this->maker->doInsertQuery(result);
+    return this->maker->doInsertQuery(result);
 }

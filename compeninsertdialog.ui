@@ -139,7 +139,7 @@
     </font>
    </property>
    <property name="text">
-    <string>理赔登记</string>
+    <string>定损登记</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">

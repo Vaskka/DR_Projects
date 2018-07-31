@@ -7,7 +7,7 @@ UpdateExecuter::UpdateExecuter(string table)
     this->table = table;
 }
 
-void UpdateExecuter::doUpdate(QuerySet dataToUpdate)
+QueryResult UpdateExecuter::doUpdate(QuerySet dataToUpdate)
 {
     string setValue = "";
     map<string ,string> dict = dataToUpdate.getDict();
@@ -22,5 +22,5 @@ void UpdateExecuter::doUpdate(QuerySet dataToUpdate)
     whereValue += (" WHERE " + this->filter.toString());
 
     string result = "UPDATE " + this->table + " SET " + setValue + whereValue + ";";
-    this->maker->doUpdateQuery(result);
+    return this->maker->doUpdateQuery(result);
 }

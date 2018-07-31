@@ -130,14 +130,14 @@ vector<QuerySet> base_database::doSelectQuery(string sql)
     mysql_close(&mysql);
 }
 
-void base_database::doUpdateQuery(string sql)
+QueryResult base_database::doUpdateQuery(string sql)
 {
     cout << sql << endl;
     MYSQL mysql;
     mysql_init(&mysql);
     mysql_real_connect(&mysql, this->host.c_str(), this->user.c_str(), this->password.c_str(), this->database.c_str(), (unsigned int)this->port, NULL, 0);
 
-try {
+    try {
         if (mysql_query(&mysql, sql.c_str()))
         {
             string err_string = mysql_error(&mysql);
@@ -151,16 +151,19 @@ try {
     catch (string &error_msg)
     {
         cout << error_msg << endl;
+        return QueryResult(false, error_msg);
     }
     catch (...)
     {
         cout << "MySQL operation is error!" << endl;
+        return QueryResult(false, "MySQL operation is error!");
     }
 
     mysql_close(&mysql);
+    return QueryResult(true, "Ok");
 }
 
-void base_database::doDeleteQuery(string sql)
+QueryResult base_database::doDeleteQuery(string sql)
 {
     MYSQL mysql;
     mysql_init(&mysql);
@@ -180,16 +183,19 @@ void base_database::doDeleteQuery(string sql)
     catch (string &error_msg)
     {
         cout << error_msg << endl;
+        return QueryResult(false, error_msg);
     }
     catch (...)
     {
         cout << "MySQL operation is error!" << endl;
+        return QueryResult(false, "MySQL operation is error!");
     }
 
     mysql_close(&mysql);
+        return QueryResult(true, "Ok");
 }
 
-void base_database::doInsertQuery(string sql)
+QueryResult base_database::doInsertQuery(string sql)
 {
     MYSQL mysql;
     mysql_init(&mysql);
@@ -209,13 +215,16 @@ try {
     catch (string &error_msg)
     {
         cout << error_msg << endl;
+        return QueryResult(false, error_msg);
     }
     catch (...)
     {
         cout << "MySQL operation is error!" << endl;
+        return QueryResult(false, "MySQL operation is error!");
     }
 
     mysql_close(&mysql);
+    return QueryResult(true, "Ok");
 }
 
 void base_database::init_mysql(MYSQL &mysql)

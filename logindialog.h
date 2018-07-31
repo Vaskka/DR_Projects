@@ -20,6 +20,8 @@ private slots:
 
     void on_Login_Quit_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::LoginDialog *ui;
 };

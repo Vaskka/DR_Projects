@@ -49,7 +49,8 @@ SOURCES += \
     incinsertdialog.cpp \
     employeequerydialog.cpp \
     employeeinsertdialog.cpp \
-    constant.cpp
+    constant.cpp \
+    queryresult.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -76,7 +77,8 @@ HEADERS += \
     incinsertdialog.h \
     employeequerydialog.h \
     employeeinsertdialog.h \
-    constant.h
+    constant.h \
+    queryresult.h
 
 FORMS += \
         mainwindow.ui \

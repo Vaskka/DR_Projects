@@ -107,8 +107,14 @@
      <addaction name="Main_ClaimSearchAction"/>
      <addaction name="Main_IncSearchAction"/>
     </widget>
+    <widget class="QMenu" name="Main_Output">
+     <property name="title">
+      <string>导出文件</string>
+     </property>
+     <addaction name="Main_OutputExcel"/>
+    </widget>
     <addaction name="Main_InfomationSearchMenu"/>
-    <addaction name="Main_OutputFileAction"/>
+    <addaction name="Main_Output"/>
    </widget>
    <widget class="QMenu" name="Main_SignDamage">
     <property name="title">
@@ -214,11 +220,6 @@
     <string>承保公司信息</string>
    </property>
   </action>
-  <action name="Main_OutputFileAction">
-   <property name="text">
-    <string>导出文件（待完善）</string>
-   </property>
-  </action>
   <action name="action">
    <property name="text">
     <string>出险登记</string>
@@ -262,6 +263,11 @@
   <action name="EmployeeShowAllAction">
    <property name="text">
     <string>显示全部</string>
+   </property>
+  </action>
+  <action name="Main_OutputExcel">
+   <property name="text">
+    <string>输出为Excel</string>
    </property>
   </action>
  </widget>

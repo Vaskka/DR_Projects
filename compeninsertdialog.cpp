@@ -59,6 +59,14 @@ void CompenInsertDialog::on_Insert_Commit_clicked()
     string wheel =  ui->Insert_WheelEdit->text().toStdString();
     string window =  ui->Insert_WindowEdit->text().toStdString();
 
+    // check
+    if (!Constant::checkCarNumber(carNumber))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的车牌号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
+
     // 检查出险
     SelectExecuter sel = SelectExecuter("case_reportcaseinfo");
 
@@ -85,7 +93,14 @@ void CompenInsertDialog::on_Insert_Commit_clicked()
 
 
     InsertExecuter ins = InsertExecuter("compen_carcompensate");
-    ins.doInsert(data);
-    this->hide();
+    QueryResult resu = ins.doInsert(data);
+    if (resu.isQueryRight)
+    {
+        this->hide();
+    }
+    else
+    {
+        QMessageBox::information(this, "Opps", resu.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+    }
 
 }

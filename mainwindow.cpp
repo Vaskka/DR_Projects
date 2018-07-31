@@ -1,4 +1,4 @@
-#include "caseinsertdialog.h"
+﻿#include "caseinsertdialog.h"
 #include "casesearchdialog.h"
 #include "claiminsertdialog.h"
 #include "claimsearchdialog.h"
@@ -201,8 +201,11 @@ void MainWindow::initAction()
     ui->EmployeeInsertAction->activate(QAction::Trigger);
     ui->EmployeeQueryAction->activate(QAction::Trigger);
     ui->EmployeeShowAllAction->activate(QAction::Trigger);
-}
 
+    // 文件输出
+    ui->Main_OutputExcel->activate(QAction::Trigger);
+
+}
 /**
  * @brief MainWindow::initConnection 初始化信号槽连接
  */
@@ -251,6 +254,11 @@ void MainWindow::initConnection()
     QObject::connect(ui->Main_IncSignAction,SIGNAL(triggered()),this,SLOT(toSignInc()));
     // 绑定登记员工的信号和槽
     QObject::connect(ui->EmployeeInsertAction,SIGNAL(triggered()),this,SLOT(toSignEmployee()));
+
+
+    /* 输出文件 */
+    // 输出为Excel
+    QObject::connect(ui->Main_OutputExcel,SIGNAL(triggered()),this,SLOT(toOutputExcel()));
 
 
 }
@@ -469,7 +477,7 @@ void MainWindow::toSeeEmployee()
 
     vector<QuerySet> result = sel.doSelect();
     this->drawInfoOnTableWidget(result);
-                   MainWindow::currentTable = "sys_employeeinfo";
+    MainWindow::currentTable = "sys_employeeinfo";
 }
 
 /**
@@ -481,6 +489,14 @@ void MainWindow::toSignEmployee()
     // 设置主窗口模态（待实现）
     /**/
     ins->show();
+}
+
+/**
+ * @brief MainWindow::toOutputExcel 输出为Excel
+ */
+void MainWindow::toOutputExcel()
+{
+
 }
 
 
@@ -528,6 +544,9 @@ void MainWindow::on_Main_SaveChangeButton_clicked()
     }
 
     // 执行更新
+
+    bool isOk = true;
+    string reason = "";
     for (int i = 0; i < rows; i++)
     {
         QuerySet data = QuerySet();
@@ -545,13 +564,29 @@ void MainWindow::on_Main_SaveChangeButton_clicked()
         // 构造过滤器
         upd.filter.addFilter("id", list[i]);
 
-        upd.doUpdate(data);
+        QueryResult result = upd.doUpdate(data);
+
+        if (!result.isQueryRight) {
+            isOk = !isOk;
+
+            SelectExecuter sel = SelectExecuter(MainWindow::currentTable);
+            reason = result.msg;
+            // 得到结果是一组结果集的向量
+            this->drawInfoOnTableWidgetWithOperator(sel.doSelect());
+            break;
+        }
+
 
     }
+    if (isOk) {
+        QMessageBox::information(this, "保存成功", "保存成功！", QMessageBox::Ok, QMessageBox::Ok);
+    }
+    else
+    {
+        QMessageBox::information(this, "保存失败", reason.c_str(), QMessageBox::Ok, QMessageBox::Ok);
 
-
+    }
 }
-
 
 /**
  * @brief MainWindow::on_Main_DeleteSelectionButton_clicked 删除
@@ -562,18 +597,40 @@ void MainWindow::on_Main_DeleteSelectionButton_clicked()
 
     // 列数
     int cols = ui->Main_InfoShowTable->columnCount();
+    // 行数
+    int rows = ui->Main_InfoShowTable->rowCount();
     int selectedRows = itemList.size() / cols;
+
     for (int i = 0; i < selectedRows; i++)
     {
         DeleteExecuter del = DeleteExecuter(MainWindow::currentTable);
+        qDebug() << ((int) (pow(cols, i + 1))) - 1;
         // 包含id的item
-        QTableWidgetItem * idItem = itemList.at(((int) (pow(cols, i + 1))) - 1);
+        QTableWidgetItem * idItem = itemList.at(cols*(i + 1) - 1);
         // 构造删除过滤器
         del.filter.addFilter("id", idItem->text().toStdString());
-        del.doDelete();
-        ui->Main_InfoShowTable->removeRow(ui->Main_InfoShowTable->row(idItem));
+
+
+        QueryResult result = del.doDelete();
+        if (result.isQueryRight) {
+
+            if (rows != selectedRows)
+                {
+                ui->Main_InfoShowTable->removeRow(ui->Main_InfoShowTable->row(idItem));
+
+            }
+            else
+                {
+                this->emptyTable();
+            }
+        }
+        else
+        {
+            QMessageBox::information(this, "删除失败", result.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+            return;
+        }
 
     }
-
+    QMessageBox::information(this, "删除成功", "删除成功！", QMessageBox::Ok, QMessageBox::Ok);
 
 }

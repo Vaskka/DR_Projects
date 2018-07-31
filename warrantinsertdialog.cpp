@@ -2,6 +2,8 @@
 #include "ui_warrantinsertdialog.h"
 #include "queryset.h"
 #include "insertexecuter.h"
+#include "constant.h"
+#include <QMessageBox>
 #include <string>
 using namespace std;
 
@@ -45,27 +47,27 @@ void WarrantInsertDialog::on_Main_CommitButton_2_clicked()
     ui->Insert_StatusEdit->clear();
     ui->Insert_TelEdit->clear();
     ui->Insert_ThroughDate->clear();
-    ui->Insert_AllShouldEdit->clear();
+
     ui->Insert_CarKindEdit->clear();
     ui->Insert_CarNumberEdit->clear();
     ui->Insert_CarPersonEdit->clear();
     ui->Insert_CarShipEdit->clear();
     ui->Insert_CarShipPreEdit->clear();
-    ui->Insert_CommicalDownRatioEdit->clear();
+
     ui->Insert_DeductibleEdit->clear();
     ui->Insert_DeductiblePreInsert->clear();
     ui->Insert_EngineNumberEdit->clear();
-    ui->Insert_ForceDownRatioEdit->clear();
+
     ui->Insert_ForcePayEdit->clear();
     ui->Insert_ForcePayPreEdit->clear();
-    ui->Insert_ForceShouldEdit->clear();
+
     ui->Insert_GrassEdit->clear();
     ui->Insert_GrassPreEdit->clear();
     ui->Insert_IncEdit->clear();
     ui->Insert_InsureDate->clear();
     ui->Insert_InsuredEdit->clear();
     ui->Insert_MainInsureEdit->clear();
-    ui->Insert_MorePayEdit->clear();
+
     ui->Insert_MoreRatioEdit->clear();
     ui->Insert_NatureEdit->clear();
     ui->Insert_NaturePreEdit->clear();
@@ -83,9 +85,7 @@ void WarrantInsertDialog::on_Main_CommitButton_2_clicked()
     ui->Insert_ScarPreInsert->clear();
     ui->Insert_SeatingEdit->clear();
     ui->Insert_StatusEdit->clear();
-    ui->Insert_SumCommcialPreEdit->clear();
-    ui->Insert_SumForcePreEdit->clear();
-    ui->Insert_SumPreEdit->clear();
+
     ui->Insert_TelEdit->clear();
     ui->Insert_TheftEdit->clear();
     ui->Insert_TheftPreEdit->clear();
@@ -118,24 +118,24 @@ void WarrantInsertDialog::on_Main_CommitButton_clicked()
     string status =  ui->Insert_StatusEdit->text().toStdString();
     string tel =   ui->Insert_TelEdit->text().toStdString();
     string throughDate =  ui->Insert_ThroughDate->text().toStdString();
-    string allShould =  ui->Insert_AllShouldEdit->text().toStdString();
+
     string carKind =  ui->Insert_CarKindEdit->text().toStdString();
     string carNumber =   ui->Insert_CarNumberEdit->text().toStdString();
     string carPerson = ui->Insert_CarPersonEdit->text().toStdString();
     string carShip = ui->Insert_CarShipEdit->text().toStdString();
     string carShipPre =  ui->Insert_CarShipPreEdit->text().toStdString();
-    string commialDownRatio =  ui->Insert_CommicalDownRatioEdit->text().toStdString();
+
     string deduct =  ui->Insert_DeductibleEdit->text().toStdString();
     string deductPre =  ui->Insert_DeductiblePreInsert->text().toStdString();
     string engineNumber =  ui->Insert_EngineNumberEdit->text().toStdString();
-    string forceDownRatio =  ui->Insert_ForceDownRatioEdit->text().toStdString();
+
     string forcePay =  ui->Insert_ForcePayEdit->text().toStdString();
     string forcePayEdit =  ui->Insert_ForcePayPreEdit->text().toStdString();
-    string forceShould =   ui->Insert_ForceShouldEdit->text().toStdString();
+
     string grass =  ui->Insert_GrassEdit->text().toStdString();
     string grassPre =  ui->Insert_GrassPreEdit->text().toStdString();
     string mainInsure =  ui->Insert_MainInsureEdit->text().toStdString();
-    string morePay =   ui->Insert_MorePayEdit->text().toStdString();
+
     string moreRatio =  ui->Insert_MoreRatioEdit->text().toStdString();
     string nature =  ui->Insert_NatureEdit->text().toStdString();
     string naturePre =  ui->Insert_NaturePreEdit->text().toStdString();
@@ -147,9 +147,7 @@ void WarrantInsertDialog::on_Main_CommitButton_clicked()
     string payWay =  ui->Insert_PayWayEdit->text().toStdString();
     string scar =  ui->Insert_ScarEdit->text().toStdString();
     string scarPre =  ui->Insert_ScarPreInsert->text().toStdString();
-    string sumCommcialPre =  ui->Insert_SumCommcialPreEdit->text().toStdString();
-    string sumForcePre =  ui->Insert_SumForcePreEdit->text().toStdString();
-    string SumPre = ui->Insert_SumPreEdit->text().toStdString();
+
     string theft = ui->Insert_TheftEdit->text().toStdString();
     string  theftPre = ui->Insert_TheftPreEdit->text().toStdString();
     string third =  ui->Insert_ThirdEdit->text().toStdString();
@@ -159,11 +157,98 @@ void WarrantInsertDialog::on_Main_CommitButton_clicked()
     string vehicleLossPre = ui->Insert_VehicleLossPreEdit->text().toStdString();
     string water =  ui->Insert_WaterEdit->text().toStdString();
     string waterPre =  ui->Insert_WaterPreEdit->text().toStdString();
+    // check
+    if (!Constant::checkCarNumber(carNumber))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的车牌号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
+    if (!Constant::checkTelNumber(tel))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的电话号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
+    if (!Constant::checkPersonalNumber(personalNumber))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的身份证号码", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+    if (!Constant::checkNumber(carShip) ||
+        !Constant::checkNumber(carShipPre) ||
+        !Constant::checkNumber(deduct) ||
+        !Constant::checkNumber(deductPre) ||
+        !Constant::checkNumber(forcePay) ||
+        !Constant::checkNumber(forcePayEdit) ||
+        !Constant::checkNumber(grass) ||
+        !Constant::checkNumber(grassPre) ||
+        !Constant::checkNumber(nature) ||
+        !Constant::checkNumber(naturePre) ||
+        !Constant::checkNumber(other) ||
+        !Constant::checkNumber(otherPre) ||
+        !Constant::checkNumber(Passenger) ||
+        !Constant::checkNumber(PassengerPre) ||
+        !Constant::checkNumber(scar) ||
+        !Constant::checkNumber(scarPre) ||
+        !Constant::checkNumber(theft) ||
+        !Constant::checkNumber(theftPre) ||
+        !Constant::checkNumber(third) ||
+        !Constant::checkNumber(thirdPre) ||
+        !Constant::checkNumber(vehicleLoss) ||
+        !Constant::checkNumber(vehicleLossPre) ||
+        !Constant::checkNumber(water) ||
+        !Constant::checkNumber(waterPre))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的保额或保费", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+    if (!Constant::checkFloat(moreRatio))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确格式的提成比率", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
+    // 总保费
+    int SumPre = Constant::toInt(carShipPre) +
+            Constant::toInt(deductPre) +
+            Constant::toInt(forcePayEdit) +
+            Constant::toInt(grassPre) +
+            Constant::toInt(naturePre) +
+            Constant::toInt(otherPre) +
+            Constant::toInt(PassengerPre) +
+            Constant::toInt(scarPre) +
+            Constant::toInt(theftPre) +
+            Constant::toInt(thirdPre) +
+            Constant::toInt(vehicleLossPre) +
+            Constant::toInt(waterPre);
+
+
+    // 商业优惠比
+    float commialDownRatio = (Constant::getCarForceDownRatio(carNumber.c_str()));
+   // 交强优惠比
+    float forceDownRatio = (Constant::getCarCommcialDownRatio(carNumber.c_str()));
+
+    // 交强总保费
+    string sumForcePre = forcePayEdit;
+
+    // 交强应收
+    int forceShould = Constant::toInt(forcePayEdit) * forceDownRatio;
+
+    // 商业总保费
+    int sumCommcialPre = Constant::toInt(commci) * commialDownRatio;
+
+
+    // 总应收
+    int allShould = (sumCommcialPre + forceShould);
+
+    // 提成费用
+    float realMoreRatio;
+    realMoreRatio = atof(moreRatio.c_str());
+    int morePay = allShould * realMoreRatio;
 
 
     QuerySet data = QuerySet();
-
-
 
     data.setValue("Agent", agent);
     data.setValue("CarBrand", brand);
@@ -186,11 +271,11 @@ void WarrantInsertDialog::on_Main_CommitButton_clicked()
     data.setValue("CarOwner", carPerson);
     data.setValue("VehicleAndVesselTaxGuarantee", carShip);
     data.setValue("TaxInsuranceForCarAndBoat", carShipPre);
-    data.setValue("CommercialPreferenceRatio", commialDownRatio);
+    data.setValue("CommercialPreferenceRatio", Constant::fromFloatToString(commialDownRatio));
     data.setValue("ExcludingDeductibleCoverage", deduct);
     data.setValue("ExcludingDeductiblePremiums", deductPre);
     data.setValue("EngineNumber", engineNumber);
-    data.setValue("StrongPreferenceRatio", forceDownRatio);
+    data.setValue("StrongPreferenceRatio", Constant::fromFloatToString(forceDownRatio));
     data.setValue("InsuranceCoverage", forcePay);
     data.setValue("PremiumInsurancePremium", forcePayEdit);
     data.setValue("ChiuQiangShouldBeCharged", forceShould);
@@ -224,8 +309,14 @@ void WarrantInsertDialog::on_Main_CommitButton_clicked()
     data.setValue("WaterLossInsurance", water);
 
     InsertExecuter ins = InsertExecuter("insur_guaranteeslip");
-    ins.doInsert(data);
-
-    this->hide();
+    QueryResult result = ins.doInsert(data);
+    if (result.isQueryRight)
+    {
+        this->hide();
+    }
+    else
+    {
+        QMessageBox::information(this, "Opps", result.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+    }
 
 }

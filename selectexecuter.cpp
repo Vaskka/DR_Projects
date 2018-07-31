@@ -19,7 +19,7 @@ vector<QuerySet> SelectExecuter::doSelect()
     }
 
     string result = "SELECT * FROM " + this->table + fil + ";";
-    qDebug() << QString::fromStdString(result);
+    //qDebug() << QString::fromStdString(result);
     // cout << result << endl;
     return this->maker->doSelectQuery(result);
 }

@@ -165,10 +165,16 @@ public slots:
      */
     void toSignEmployee();
 
+
+
+    /**
+     * @brief toOutputExcel 输出Excel
+     */
+    void toOutputExcel();
+public:
     /**
      * @brief currentTable 当前查询的表名
      */
-public:
     static string currentTable;
 private slots:
     void on_Main_SaveChangeButton_clicked();

@@ -64,6 +64,22 @@ void ClaimInsertDialog::on_Insert_Commit_clicked()
     string tel = ui->Insert_TelEdit->text().toStdString();
     string third = ui->Insert_ThirdIncIEdit->text().toStdString();
     string status = ui->Insert_StatusEdit->text().toStdString();
+    // check
+    if (!Constant::checkCarNumber(carNumber))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的车牌号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+    if (!Constant::checkTelNumber(tel))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的电话号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
+
+
+
+
     // 检查出险
     SelectExecuter sel = SelectExecuter("case_reportcaseinfo");
 
@@ -104,6 +120,13 @@ void ClaimInsertDialog::on_Insert_Commit_clicked()
     data.setValue("CompensateDescription", description);
 
     InsertExecuter ins = InsertExecuter("claim_claimmanagmentinfo");
-    ins.doInsert(data);
-    this->hide();
+    QueryResult resu = ins.doInsert(data);
+    if (resu.isQueryRight)
+    {
+        this->hide();
+    }
+    else
+    {
+        QMessageBox::information(this, "Opps", resu.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+    }
 }

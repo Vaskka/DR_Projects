@@ -9,7 +9,7 @@ class InsertExecuter : public Executer
 {
 public:
     InsertExecuter(string table);
-    void doInsert(QuerySet row);
+    QueryResult doInsert(QuerySet row);
 };
 
 #endif // INSERTEXECUTER_H

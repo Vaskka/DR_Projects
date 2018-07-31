@@ -3,6 +3,7 @@
 #include "queryset.h"
 #include "ui_employeeinsertdialog.h"
 
+#include <QMessageBox>
 #include <string>
 using namespace std;
 
@@ -74,6 +75,13 @@ void EmployeeInsertDialog::on_Admin_Commit_clicked()
     string unit =  ui->Admin_EmployeeUnitEdit->text().toStdString();
     string description =  ui->Admin_DecriptionText->toPlainText().toStdString();
 
+    // check
+
+    if (!Constant::checkTelNumber(tel))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的电话号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
 
     // 构造包含插入数据的QuerySet类，列名为key，数据为值
     QuerySet data = QuerySet();
@@ -96,9 +104,13 @@ void EmployeeInsertDialog::on_Admin_Commit_clicked()
     data.setValue("Description", description);
 
     InsertExecuter ins = InsertExecuter("sys_employeeinfo");
-    ins.doInsert(data);
-
-
-
-    this->hide();
+    QueryResult result = ins.doInsert(data);
+    if (result.isQueryRight)
+    {
+        this->hide();
+    }
+    else
+    {
+        QMessageBox::information(this, "Opps", result.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+    }
 }

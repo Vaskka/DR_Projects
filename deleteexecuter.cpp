@@ -9,15 +9,15 @@ DeleteExecuter::DeleteExecuter(string table)
 
 }
 
-void DeleteExecuter::doDelete()
+QueryResult DeleteExecuter::doDelete()
 {
     if (this->filter.isEmpty()) {
         cerr << "error:未给删除器指定过滤器" << endl;
-        return;
+        return QueryResult(false, "error:未给删除器指定过滤器");
     }
     string result = "delete from " + table + " where " + this->filter.toString() + ";";
     cout << result;
-    this->maker->doDeleteQuery(result);
+    return this->maker->doDeleteQuery(result);
 }
 
 

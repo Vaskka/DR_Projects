@@ -9,7 +9,7 @@ class UpdateExecuter : public Executer
 {
 public:
     UpdateExecuter(string table);
-    void doUpdate(QuerySet dataToUpdate);
+    QueryResult doUpdate(QuerySet dataToUpdate);
 };
 
 #endif // UPDATEEXECUTER_H

@@ -3,6 +3,8 @@
 #include "queryset.h"
 #include "ui_incinsertdialog.h"
 
+#include <QMessageBox>
+#include <QMessageBox>
 #include <string>
 
 using namespace std;
@@ -51,7 +53,14 @@ void IncInsertDialog::on_Insert_Commit_clicked()
     data.setValue("Description", description);
 
     InsertExecuter ins = InsertExecuter("sys_insurancecomputer");
-    ins.doInsert(data);
+    QueryResult result = ins.doInsert(data);
+    if (result.isQueryRight)
+    {
+        this->hide();
+    }
+    else
+    {
+        QMessageBox::information(this, "Opps", result.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+    }
 
-    this->hide();
 }

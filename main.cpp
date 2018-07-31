@@ -2,6 +2,7 @@
 #include "logindialog.h"
 #include "mainwindow.h"
 #include <QApplication>
+#include <QMessageBox>
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +10,12 @@ int main(int argc, char *argv[])
 
     LoginDialog dlg;
     dlg.show();
-    Constant::loadConfig();
+    if (!Constant::loadConfig())
+    {
+        QMessageBox::information(nullptr, "Opps", "无法找到或打开配置文件", QMessageBox::Ok, QMessageBox::Ok);
+    }
+
+
+
     return a.exec();
 }

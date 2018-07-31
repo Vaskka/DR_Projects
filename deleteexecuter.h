@@ -9,7 +9,7 @@ class DeleteExecuter : public Executer
 public:
     DeleteExecuter(string table);
 
-    void doDelete();
+    QueryResult doDelete();
 };
 
 #endif // DELETEEXECUTER_H

@@ -96,3 +96,5 @@ void LoginDialog::on_Login_Quit_clicked()
 {
     qApp->quit();
 }
+
+

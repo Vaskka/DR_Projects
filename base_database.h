@@ -3,6 +3,7 @@
 
 #include <string>
 #include <mysql/mysql.h>
+#include "queryresult.h"
 #include "queryset.h"
 #include <vector>
 
@@ -32,9 +33,9 @@ public:
 
 
     vector<QuerySet> doSelectQuery(string sql);
-    void doUpdateQuery(string sql);
-    void doDeleteQuery(string sql);
-    void doInsertQuery(string sql);
+    QueryResult doUpdateQuery(string sql);
+    QueryResult doDeleteQuery(string sql);
+    QueryResult doInsertQuery(string sql);
 
 private:
     string host;

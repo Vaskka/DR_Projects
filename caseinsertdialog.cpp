@@ -3,6 +3,7 @@
 #include "queryset.h"
 #include "ui_caseinsertdialog.h"
 
+#include <qmessagebox.h>
 #include <string>
 
 using namespace std;
@@ -56,6 +57,19 @@ void CaseInsertDialog::on_Insert_Commit_clicked()
     string tel = ui->Insert_TelEdit->text().toStdString();
     string unit = ui->Insert_UnitEdit->text().toStdString();
 
+    // check
+    if (!Constant::checkCarNumber(carNumber))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的车牌号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
+    if (!Constant::checkTelNumber(tel))
+    {
+        QMessageBox::information(this, "Opps", "请输入正确的电话号", QMessageBox::Ok, QMessageBox::Ok);
+        return;
+    }
+
 
     QuerySet data = QuerySet();
 
@@ -69,8 +83,15 @@ void CaseInsertDialog::on_Insert_Commit_clicked()
     data.setValue("SummaryOfLosses", summary);
     data.setValue("Description", other);
 
-    InsertExecuter ins = InsertExecuter("case_reportcaseinfo");
-    ins.doInsert(data);
 
-    this->hide();
+    InsertExecuter ins = InsertExecuter("case_reportcaseinfo");
+    QueryResult result = ins.doInsert(data);
+    if (result.isQueryRight)
+    {
+        this->hide();
+    }
+    else
+    {
+        QMessageBox::information(this, "Opps", result.msg.c_str(), QMessageBox::Ok, QMessageBox::Ok);
+    }
 }
