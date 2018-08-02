@@ -40,6 +40,23 @@ LoginDialog::LoginDialog(QWidget *parent) :
     ui(new Ui::LoginDialog)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color:rgb(150,205,205)");
+    QFont fontTitle("Microsoft YaHei", 20, 75);
+    QFont fontText("Microsoft YaHei", 8, 75);
+
+    ui->Login_UserNumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+    ui->Login_UserPasswordEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+    ui->Login_UserNumber_Label->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+    ui->Login_UserPasswordLabel->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+    ui->label->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+    ui->Login_LoginButton->setFont(fontText);
+    ui->Login_Quit->setFont(fontText);
+    ui->Login_UserPasswordLabel->setFont(fontText);
+    ui->Login_UserNumber_Label->setFont(fontText);
+    ui->label_2->setFont(fontTitle);
+    ui->label_2->setAlignment(Qt::AlignHCenter);
+    ui->label_2->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+
 }
 
 LoginDialog::~LoginDialog()

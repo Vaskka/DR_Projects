@@ -101,9 +101,9 @@
   <widget class="QLabel" name="label_61">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>90</y>
-     <width>281</width>
+     <x>100</x>
+     <y>70</y>
+     <width>541</width>
      <height>71</height>
     </rect>
    </property>
@@ -150,9 +150,9 @@
   <widget class="QRadioButton" name="Main_Dateable">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>350</y>
-     <width>171</width>
+     <x>360</x>
+     <y>360</y>
+     <width>211</width>
      <height>27</height>
     </rect>
    </property>
@@ -160,6 +160,30 @@
     <string>同时使用时间查询</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>160</y>
+     <width>541</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>Main_NumberEdit</zorder>
+  <zorder>Main_CarNumberEdit</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>label_62</zorder>
+  <zorder>label_59</zorder>
+  <zorder>label_61</zorder>
+  <zorder>label_63</zorder>
+  <zorder>Main_DateEdit</zorder>
+  <zorder>Main_Dateable</zorder>
  </widget>
  <resources/>
  <connections/>

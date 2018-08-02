@@ -11,7 +11,73 @@ ClaimInsertDialog::ClaimInsertDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ClaimInsertDialog)
 {
-    ui->setupUi(this);
+	ui->setupUi(this);
+
+	this->setStyleSheet("background-color:rgb(150,205,205)");
+	QFont fontTitle("Microsoft YaHei", 20, 75);
+	QFont fontText("Microsoft YaHei", 8, 75);
+
+	ui->label_10->setFont(fontTitle);
+	ui->label_10->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border:2px groove grey");
+	ui->label_10->setAlignment(Qt::AlignHCenter);
+
+	ui->Insert_CaseNumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_CarNumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_ClaimStatusEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_CostEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_NumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_DamangeEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_TelEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_Date->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_DescriptionEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_IncNumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_LoseEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_PersonEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_StatusEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_ThirdIncIEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+
+
+
+	ui->label->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_2->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_3->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_4->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_5->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_6->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_7->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_8->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_9->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_11->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_12->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_13->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_14->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_15->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+
+	ui->Insert_Commit->setFont(fontText);
+	ui->Insert_Reset->setFont(fontText);
+	ui->Insert_Return->setFont(fontText);
+	ui->label_16->setStyleSheet("background-color:rgb(102,139,139);border:3px groove grey");
+	ui->label_17->setStyleSheet("background-color:rgb(102,139,139);border:3px groove grey");
+	ui->label_18->setStyleSheet("background-color:rgb(102,139,139);border:3px groove grey");
+
+
+
+
+	ui->label_2->setFont(fontText);
+	ui->label_3->setFont(fontText);
+	ui->label_4->setFont(fontText);
+	ui->label_5->setFont(fontText);
+	ui->label_6->setFont(fontText);
+	ui->label_7->setFont(fontText);
+	ui->label_8->setFont(fontText);
+	ui->label_9->setFont(fontText);
+	ui->label_11->setFont(fontText);
+	ui->label_12->setFont(fontText);
+	ui->label_13->setFont(fontText);
+	ui->label_14->setFont(fontText);
+	ui->label_15->setFont(fontText);
+
+	ui->label->setFont(fontText);
 }
 
 ClaimInsertDialog::~ClaimInsertDialog()

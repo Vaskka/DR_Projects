@@ -13,9 +13,34 @@ IncInsertDialog::IncInsertDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::IncInsertDialog)
 {
-    ui->setupUi(this);
-}
+	ui->setupUi(this);
+	this->setStyleSheet("background-color:rgb(150,205,205)");
+	QFont fontTitle("Microsoft YaHei", 20, 75);
+	QFont fontText("Microsoft YaHei", 10, 75);
+	ui->label_10->setFont(fontTitle);
+	ui->label_10->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border:3px groove grey");
+	ui->label_10->setAlignment(Qt::AlignHCenter);
+	ui->label_11->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_2->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_3->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);");
 
+	ui->label->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border:3px groove grey");
+
+
+	ui->Insert_DescriptionEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_NumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Insert_NameEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+
+
+
+	ui->Insert_Commit->setFont(fontText);
+	ui->Insert_Reset->setFont(fontText);
+	ui->Insert_Return->setFont(fontText);
+
+	ui->label_11->setFont(fontText);
+	ui->label_2->setFont(fontText);
+	ui->label_3->setFont(fontText);
+}
 IncInsertDialog::~IncInsertDialog()
 {
     delete ui;

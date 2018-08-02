@@ -62,8 +62,8 @@
   <widget class="QPushButton" name="Insert_Commit">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>410</y>
+     <x>400</x>
+     <y>400</y>
      <width>171</width>
      <height>41</height>
     </rect>
@@ -78,10 +78,10 @@
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>20</y>
-     <width>201</width>
-     <height>41</height>
+     <x>80</x>
+     <y>40</y>
+     <width>801</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -114,9 +114,9 @@
   <widget class="QPushButton" name="Insert_Reset">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>410</y>
-     <width>91</width>
+     <x>700</x>
+     <y>400</y>
+     <width>61</width>
      <height>41</height>
     </rect>
    </property>
@@ -127,9 +127,9 @@
   <widget class="QPushButton" name="Insert_Return">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>410</y>
-     <width>91</width>
+     <x>790</x>
+     <y>400</y>
+     <width>61</width>
      <height>41</height>
     </rect>
    </property>
@@ -157,6 +157,30 @@
     </rect>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>120</y>
+     <width>801</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_11</zorder>
+  <zorder>Insert_NumberEdit</zorder>
+  <zorder>Insert_Commit</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_3</zorder>
+  <zorder>Insert_Reset</zorder>
+  <zorder>Insert_Return</zorder>
+  <zorder>Insert_NameEdit</zorder>
+  <zorder>Insert_DescriptionEdit</zorder>
  </widget>
  <resources/>
  <connections/>

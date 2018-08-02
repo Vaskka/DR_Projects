@@ -18,6 +18,7 @@
 #include "utils.h"
 #include "warrantinsertdialog.h"
 #include "warrantsearchdialog.h"
+#include "lookup.h"
 #include <QDebug>
 #include <QMessageBox>
 #include <cmath>
@@ -33,6 +34,17 @@ MainWindow::MainWindow(QWidget *parent, User* user) :
     this->initAction();
     this->initConnection();
     this->initWidget();
+	
+	this->setStyleSheet("background-color:rgb(150,205,205)");
+	QFont fontTitle("Microsoft YaHei", 20, 75);
+	QFont fontText("Microsoft YaHei", 8, 75);
+
+    ui->Main_InfoShowTable->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0)");
+	ui->label->setStyleSheet("background-color:rgb(102,139,139)");
+	ui->Main_DeleteSelectionButton->setFont(fontText);
+	ui->Main_SaveChangeButton->setFont(fontText);
+	ui->Main_TableTitle->setFont(fontTitle);
+	ui->Main_TableTitle->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
 
 }
 
@@ -206,7 +218,7 @@ void MainWindow::initAction()
     ui->EmployeeShowAllAction->activate(QAction::Trigger);
 
     // 文件输出
-    ui->Main_OutputExcel->activate(QAction::Trigger);
+    ui->Main_OutputFileAction->activate(QAction::Trigger);
 
 }
 /**
@@ -261,7 +273,7 @@ void MainWindow::initConnection()
 
     /* 输出文件 */
     // 输出为Excel
-    QObject::connect(ui->Main_OutputExcel,SIGNAL(triggered()),this,SLOT(toOutputExcel()));
+    QObject::connect(ui->Main_OutputFileAction,SIGNAL(triggered()),this,SLOT(toOutputExcel()));
 
 
 }
@@ -515,13 +527,13 @@ void MainWindow::toOutputExcel()
         map<string, string>::iterator ite;
         for (ite = result.at(i).getBegin(); ite != result.at(i).getEnd(); ite++)
         {
-            //item.setValue(tr(trans.iterator(ite->first).c_str()), ite->second.c_str());
-            item.setValue("a", "b");
+            item.setValue(tr(trans.iterator(ite->first).c_str()), ite->second.c_str());
+//            item.setValue("a", "b");
         }
         output.append(item.toString());
     }
 
-    output.run("http://127.0.0.1:8000/api");
+    output.run("https://www.vaskka.com/api/other");
 }
 
 

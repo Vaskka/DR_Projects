@@ -12,7 +12,137 @@ WarrantInsertDialog::WarrantInsertDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::WarrantInsertDialog)
 {
-    ui->setupUi(this);
+	ui->setupUi(this);
+
+	this->setStyleSheet("background-color:rgb(245,245,245)");
+	QFont fontTitle("Microsoft YaHei", 20, 75);
+	QFont fontText("Microsoft YaHei", 8, 75);
+
+
+
+
+
+	ui->label->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_2->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_3->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_4->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_5->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_6->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_7->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_8->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_9->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_13->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_10->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_11->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_12->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_14->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_15->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_16->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_17->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_18->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_19->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_20->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_21->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_22->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_23->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_24->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_25->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_26->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_27->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_28->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_29->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_30->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_31->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_32->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_33->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_34->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_35->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_36->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_37->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_38->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_39->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_40->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_41->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_42->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_43->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_44->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_45->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_46->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_47->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_48->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_49->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_50->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_51->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_52->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_53->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_54->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_55->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_56->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+
+	ui->label_57->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border:3px groove grey");
+
+
+	ui->Main_CommitButton->setFont(fontText);
+	ui->Main_CommitButton_2->setFont(fontText);
+	ui->Main_CommitButton_3->setFont(fontText);
+
+
+	ui->label_2->setFont(fontText);
+	ui->label_3->setFont(fontText);
+	ui->label_4->setFont(fontText);
+	ui->label_5->setFont(fontText);
+	ui->label_6->setFont(fontText);
+	ui->label_7->setFont(fontText);
+	ui->label_8->setFont(fontText);
+	ui->label_9->setFont(fontText);
+	ui->label->setFont(fontText);
+	ui->label_11->setFont(fontText);
+	ui->label_10->setFont(fontText);
+	ui->label_12->setFont(fontText);
+	ui->label_13->setFont(fontText);
+	ui->label_14->setFont(fontText);
+	ui->label_15->setFont(fontText);
+	ui->label_16->setFont(fontText);
+	ui->label_17->setFont(fontText);
+	ui->label_18->setFont(fontText);
+	ui->label_19->setFont(fontText);
+	ui->label_20->setFont(fontText);
+	ui->label_21->setFont(fontText);
+	ui->label_22->setFont(fontText);
+	ui->label_23->setFont(fontText);
+	ui->label_24->setFont(fontText);
+	ui->label_25->setFont(fontText);
+	ui->label_26->setFont(fontText);
+	ui->label_27->setFont(fontText);
+	ui->label_28->setFont(fontText);
+	ui->label_29->setFont(fontText);
+	ui->label_30->setFont(fontText);
+	ui->label_31->setFont(fontText);
+	ui->label_32->setFont(fontText);
+	ui->label_33->setFont(fontText);
+	ui->label_34->setFont(fontText);
+	ui->label_35->setFont(fontText);
+	ui->label_36->setFont(fontText);
+	ui->label_37->setFont(fontText);
+	ui->label_38->setFont(fontText);
+	ui->label_39->setFont(fontText);
+	ui->label_40->setFont(fontText);
+	ui->label_41->setFont(fontText);
+	ui->label_42->setFont(fontText);
+	ui->label_43->setFont(fontText);
+	ui->label_44->setFont(fontText);
+	ui->label_45->setFont(fontText);
+	ui->label_46->setFont(fontText);
+	ui->label_47->setFont(fontText);
+	ui->label_48->setFont(fontText);
+	ui->label_49->setFont(fontText);
+	ui->label_50->setFont(fontText);
+	ui->label_51->setFont(fontText);
+	ui->label_52->setFont(fontText);
+	ui->label_53->setFont(fontText);
+	ui->label_54->setFont(fontText);
+	ui->label_55->setFont(fontText);
+	ui->label_56->setFont(fontText);
 }
 
 WarrantInsertDialog::~WarrantInsertDialog()

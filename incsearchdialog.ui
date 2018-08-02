@@ -16,9 +16,9 @@
   <widget class="QLabel" name="label_61">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>100</x>
      <y>70</y>
-     <width>381</width>
+     <width>531</width>
      <height>71</height>
     </rect>
    </property>
@@ -46,7 +46,7 @@
     <rect>
      <x>170</x>
      <y>200</y>
-     <width>181</width>
+     <width>151</width>
      <height>51</height>
     </rect>
    </property>
@@ -116,6 +116,27 @@
     <string>公司名称：</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>160</y>
+     <width>531</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_61</zorder>
+  <zorder>Main_IncSearchNumberEdit</zorder>
+  <zorder>label_59</zorder>
+  <zorder>Main_IncSearchNameEdit</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>label_62</zorder>
  </widget>
  <resources/>
  <connections/>

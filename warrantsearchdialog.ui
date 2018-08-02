@@ -101,9 +101,9 @@
   <widget class="QLabel" name="label_61">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>220</x>
      <y>40</y>
-     <width>291</width>
+     <width>551</width>
      <height>71</height>
     </rect>
    </property>
@@ -134,7 +134,7 @@
     <rect>
      <x>300</x>
      <y>130</y>
-     <width>171</width>
+     <width>131</width>
      <height>61</height>
     </rect>
    </property>
@@ -150,8 +150,8 @@
   <widget class="QRadioButton" name="Main_Dateable">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>280</y>
+     <x>470</x>
+     <y>310</y>
      <width>171</width>
      <height>27</height>
     </rect>
@@ -188,6 +188,32 @@
     </rect>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>551</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>Main_NameEdit</zorder>
+  <zorder>label_57</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>label_60</zorder>
+  <zorder>Main_CarNumberEdit</zorder>
+  <zorder>label_61</zorder>
+  <zorder>Main_DateEdit</zorder>
+  <zorder>label_58</zorder>
+  <zorder>Main_Dateable</zorder>
+  <zorder>label_59</zorder>
+  <zorder>Main_NumberEdit</zorder>
  </widget>
  <resources/>
  <connections/>

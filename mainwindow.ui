@@ -66,6 +66,24 @@
      <string>删除选中</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1061</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>Main_InfoShowTable</zorder>
+   <zorder>Main_TableTitle</zorder>
+   <zorder>Main_SaveChangeButton</zorder>
+   <zorder>Main_DeleteSelectionButton</zorder>
   </widget>
   <widget class="QMenuBar" name="Main_MenuBar">
    <property name="geometry">
@@ -107,18 +125,12 @@
      <addaction name="Main_ClaimSearchAction"/>
      <addaction name="Main_IncSearchAction"/>
     </widget>
-    <widget class="QMenu" name="Main_Output">
-     <property name="title">
-      <string>导出文件</string>
-     </property>
-     <addaction name="Main_OutputExcel"/>
-    </widget>
     <addaction name="Main_InfomationSearchMenu"/>
-    <addaction name="Main_Output"/>
+    <addaction name="Main_OutputFileAction"/>
    </widget>
    <widget class="QMenu" name="Main_SignDamage">
     <property name="title">
-     <string>定损理赔</string>
+     <string>出险定损</string>
     </property>
     <addaction name="Main_CaseSign"/>
     <addaction name="Main_DamageSign"/>
@@ -220,6 +232,11 @@
     <string>承保公司信息</string>
    </property>
   </action>
+  <action name="Main_OutputFileAction">
+   <property name="text">
+    <string>导出Excel</string>
+   </property>
+  </action>
   <action name="action">
    <property name="text">
     <string>出险登记</string>
@@ -263,11 +280,6 @@
   <action name="EmployeeShowAllAction">
    <property name="text">
     <string>显示全部</string>
-   </property>
-  </action>
-  <action name="Main_OutputExcel">
-   <property name="text">
-    <string>输出为Excel</string>
    </property>
   </action>
  </widget>

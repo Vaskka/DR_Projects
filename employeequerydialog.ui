@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1045</width>
-    <height>448</height>
+    <width>882</width>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>40</x>
      <y>20</y>
-     <width>211</width>
-     <height>101</height>
+     <width>811</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -37,7 +37,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>60</x>
      <y>130</y>
      <width>131</width>
      <height>71</height>
@@ -55,7 +55,7 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>60</x>
      <y>230</y>
      <width>131</width>
      <height>71</height>
@@ -73,7 +73,7 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>490</x>
      <y>130</y>
      <width>151</width>
      <height>71</height>
@@ -91,7 +91,7 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>490</x>
      <y>230</y>
      <width>151</width>
      <height>71</height>
@@ -109,9 +109,9 @@
   <widget class="QLineEdit" name="Admin_EmplyeeNumberEdit">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>170</x>
      <y>150</y>
-     <width>201</width>
+     <width>191</width>
      <height>29</height>
     </rect>
    </property>
@@ -119,9 +119,9 @@
   <widget class="QLineEdit" name="Admin_EmplyeeNameEdit">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>170</x>
      <y>250</y>
-     <width>201</width>
+     <width>191</width>
      <height>29</height>
     </rect>
    </property>
@@ -129,7 +129,7 @@
   <widget class="QLineEdit" name="Admin_PersonalNumberEdit">
    <property name="geometry">
     <rect>
-     <x>720</x>
+     <x>610</x>
      <y>150</y>
      <width>201</width>
      <height>29</height>
@@ -139,7 +139,7 @@
   <widget class="QLineEdit" name="Admin_EmplyeeUnitEdit">
    <property name="geometry">
     <rect>
-     <x>720</x>
+     <x>610</x>
      <y>250</y>
      <width>201</width>
      <height>29</height>
@@ -149,10 +149,10 @@
   <widget class="QPushButton" name="Admin_Query">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>360</y>
-     <width>191</width>
-     <height>51</height>
+     <x>320</x>
+     <y>320</y>
+     <width>231</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -165,10 +165,10 @@
   <widget class="QPushButton" name="Admin_Reset">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>360</y>
-     <width>141</width>
-     <height>51</height>
+     <x>640</x>
+     <y>320</y>
+     <width>81</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -178,16 +178,42 @@
   <widget class="QPushButton" name="Admin_Return">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>360</y>
-     <width>141</width>
-     <height>51</height>
+     <x>730</x>
+     <y>320</y>
+     <width>81</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>返回</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>90</y>
+     <width>811</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label_6</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>Admin_EmplyeeNumberEdit</zorder>
+  <zorder>Admin_EmplyeeNameEdit</zorder>
+  <zorder>Admin_PersonalNumberEdit</zorder>
+  <zorder>Admin_EmplyeeUnitEdit</zorder>
+  <zorder>Admin_Query</zorder>
+  <zorder>Admin_Reset</zorder>
+  <zorder>Admin_Return</zorder>
  </widget>
  <resources/>
  <connections/>

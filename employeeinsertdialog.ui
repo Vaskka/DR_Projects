@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>880</width>
-    <height>660</height>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -94,7 +94,7 @@
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>50</y>
      <width>101</width>
      <height>31</height>
@@ -133,7 +133,7 @@
   <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>150</y>
      <width>81</width>
      <height>31</height>
@@ -146,7 +146,7 @@
   <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>100</y>
      <width>81</width>
      <height>31</height>
@@ -159,7 +159,7 @@
   <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>200</y>
      <width>81</width>
      <height>31</height>
@@ -172,7 +172,7 @@
   <widget class="QLabel" name="label_14">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>250</y>
      <width>81</width>
      <height>31</height>
@@ -185,7 +185,7 @@
   <widget class="QLabel" name="label_15">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>350</y>
      <width>81</width>
      <height>31</height>
@@ -198,7 +198,7 @@
   <widget class="QLabel" name="label_16">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>300</y>
      <width>81</width>
      <height>31</height>
@@ -211,7 +211,7 @@
   <widget class="QLabel" name="label_17">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>450</x>
      <y>400</y>
      <width>81</width>
      <height>31</height>
@@ -304,7 +304,7 @@
   <widget class="QLineEdit" name="Admin_EmployeePersonalNumberEdit">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>50</y>
      <width>201</width>
      <height>29</height>
@@ -314,7 +314,7 @@
   <widget class="QLineEdit" name="Admin_EmployeeSourceWorkEdit">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>100</y>
      <width>201</width>
      <height>29</height>
@@ -324,7 +324,7 @@
   <widget class="QLineEdit" name="Admin_EmployeeTelEdit">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>200</y>
      <width>201</width>
      <height>29</height>
@@ -334,7 +334,7 @@
   <widget class="QLineEdit" name="Admin_EmployeeAdressEdit">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>300</y>
      <width>201</width>
      <height>29</height>
@@ -344,7 +344,7 @@
   <widget class="QLineEdit" name="Admin_EmployeeOkEdit">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>350</y>
      <width>201</width>
      <height>29</height>
@@ -354,7 +354,7 @@
   <widget class="QDateEdit" name="Admin_EmployeeComeDate">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>250</y>
      <width>201</width>
      <height>30</height>
@@ -370,10 +370,10 @@
   <widget class="QPushButton" name="Admin_Commit">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>550</y>
-     <width>191</width>
-     <height>51</height>
+     <x>340</x>
+     <y>520</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -386,10 +386,10 @@
   <widget class="QPushButton" name="Admin_Reset">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>550</y>
-     <width>141</width>
-     <height>51</height>
+     <x>570</x>
+     <y>520</y>
+     <width>81</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -402,10 +402,10 @@
   <widget class="QPushButton" name="Admin_Return">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>550</y>
-     <width>141</width>
-     <height>51</height>
+     <x>690</x>
+     <y>520</y>
+     <width>81</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -418,7 +418,7 @@
   <widget class="QTextEdit" name="Admin_DecriptionText">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>400</y>
      <width>201</width>
      <height>85</height>
@@ -428,7 +428,7 @@
   <widget class="QDateEdit" name="Admin_EmployeeBirthdayDate">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>570</x>
      <y>150</y>
      <width>201</width>
      <height>30</height>
@@ -441,6 +441,69 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>361</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>30</y>
+     <width>401</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label_10</zorder>
+  <zorder>label_18</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
+  <zorder>label_13</zorder>
+  <zorder>label_14</zorder>
+  <zorder>label_15</zorder>
+  <zorder>label_16</zorder>
+  <zorder>label_17</zorder>
+  <zorder>Admin_EmployeeNumberEdit</zorder>
+  <zorder>Admin_EmployeeNameEdit</zorder>
+  <zorder>Admin_EmployeeStatusEdit</zorder>
+  <zorder>Admin_EmployeeSourceEdit</zorder>
+  <zorder>Admin_EmployeeUnitEdit</zorder>
+  <zorder>Admin_EmployeeRecommandEdit</zorder>
+  <zorder>Admin_EmployeeSexEdit</zorder>
+  <zorder>Admin_EmployeeEducationEdit</zorder>
+  <zorder>Admin_EmployeePersonalNumberEdit</zorder>
+  <zorder>Admin_EmployeeSourceWorkEdit</zorder>
+  <zorder>Admin_EmployeeTelEdit</zorder>
+  <zorder>Admin_EmployeeAdressEdit</zorder>
+  <zorder>Admin_EmployeeOkEdit</zorder>
+  <zorder>Admin_EmployeeComeDate</zorder>
+  <zorder>Admin_Commit</zorder>
+  <zorder>Admin_Reset</zorder>
+  <zorder>Admin_Return</zorder>
+  <zorder>Admin_DecriptionText</zorder>
+  <zorder>Admin_EmployeeBirthdayDate</zorder>
  </widget>
  <resources/>
  <connections/>

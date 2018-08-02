@@ -11,7 +11,78 @@ EmployeeInsertDialog::EmployeeInsertDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::EmployeeInsertDialog)
 {
-    ui->setupUi(this);
+	ui->setupUi(this);
+
+	this->setStyleSheet("background-color:rgb(150,205,205)");
+	QFont fontTitle("Microsoft YaHei", 20, 75);
+	QFont fontText("Microsoft YaHei", 8, 75);
+
+
+	ui->Admin_DecriptionText->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeAdressEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeBirthdayDate->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeComeDate->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeEducationEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeNameEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeNumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeOkEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeePersonalNumberEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeRecommandEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeSexEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeSourceEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeStatusEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeSourceWorkEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeTelEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+	ui->Admin_EmployeeUnitEdit->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0);border:3px groove grey");
+
+
+
+
+	ui->label->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_2->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_3->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_4->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_5->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_6->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_7->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_8->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_9->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_13->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_11->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_12->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_14->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_15->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+	ui->label_16->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+	ui->label_17->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border-radius:10px");
+
+
+	ui->Admin_Commit->setFont(fontText);
+	ui->Admin_Reset->setFont(fontText);
+	ui->Admin_Return->setFont(fontText);
+	ui->label_10->setStyleSheet("background-color:rgb(102,139,139);border:2px groove grey");
+	ui->label_18->setStyleSheet("background-color:rgb(102,139,139);border:2px groove grey");
+
+
+
+
+
+	ui->label_2->setFont(fontText);
+	ui->label_3->setFont(fontText);
+	ui->label_4->setFont(fontText);
+	ui->label_5->setFont(fontText);
+	ui->label_6->setFont(fontText);
+	ui->label_7->setFont(fontText);
+	ui->label_8->setFont(fontText);
+	ui->label_9->setFont(fontText);
+	ui->label->setFont(fontText);
+	ui->label_11->setFont(fontText);
+	ui->label_12->setFont(fontText);
+	ui->label_13->setFont(fontText);
+	ui->label_14->setFont(fontText);
+	ui->label_15->setFont(fontText);
+	ui->label_16->setFont(fontText);
+	ui->label_17->setFont(fontText);
+
 }
 
 EmployeeInsertDialog::~EmployeeInsertDialog()
