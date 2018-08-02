@@ -11,7 +11,7 @@ class EmployeeInsertDialog;
 * @projectName   AutomobileInsurance
 * @brief         员工信息登记
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-28
 */
 class EmployeeInsertDialog : public QDialog
 {

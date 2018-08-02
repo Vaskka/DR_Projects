@@ -4,7 +4,12 @@
 #include "executer.h"
 
 
-// over test
+/**
+* @projectName   AutomobileInsurance
+* @brief         获取执行器
+* @author        Vaskka
+* @date          2018-7-27
+*/
 class SelectExecuter : public Executer
 {
 public:

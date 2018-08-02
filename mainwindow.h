@@ -12,6 +12,12 @@ namespace Ui {
 class MainWindow;
 }
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         主界面数据展示接口
+* @author        Vaskka
+* @date          2018-7-29
+*/
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

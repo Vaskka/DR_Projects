@@ -4,6 +4,12 @@
 #include <map>
 using namespace std;
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         翻译器
+* @author        Vaskka
+* @date          2018-7-31
+*/
 class LookUp
 {
 public:

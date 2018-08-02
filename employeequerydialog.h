@@ -11,7 +11,7 @@ class EmployeeQueryDialog;
 * @projectName   AutomobileInsurance
 * @brief         员工查询图形接口
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-28
 */
 class EmployeeQueryDialog : public QDialog
 {

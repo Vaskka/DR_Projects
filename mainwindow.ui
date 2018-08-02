@@ -37,7 +37,7 @@
        </size>
       </property>
       <property name="text">
-       <string>TableTitle</string>
+       <string>Welcome!</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

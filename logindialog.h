@@ -7,6 +7,12 @@ namespace Ui {
 class LoginDialog;
 }
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         登陆界面图形接口
+* @author        Vaskka
+* @date          2018-7-28
+*/
 class LoginDialog : public QDialog
 {
     Q_OBJECT
@@ -19,8 +25,6 @@ private slots:
     void on_Login_LoginButton_clicked();
 
     void on_Login_Quit_clicked();
-
-    void on_pushButton_clicked();
 
 private:
     Ui::LoginDialog *ui;

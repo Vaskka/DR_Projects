@@ -11,7 +11,7 @@ class ClaimInsertDialog;
 * @projectName   AutomobileInsurance
 * @brief         理赔登记图形接口
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-27
 */
 class ClaimInsertDialog : public QDialog
 {

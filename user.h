@@ -7,7 +7,12 @@
 
 using namespace std;
 
-
+/**
+* @projectName   AutomobileInsurance
+* @brief         用户类
+* @author        Vaskka
+* @date          2018-7-26
+*/
 class User
 {
 public:

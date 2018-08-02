@@ -6,6 +6,12 @@
 #include <QUrl>
 #include <QNetworkReply>
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         网络下载模块
+* @author        Vaskka
+* @date          2018-7-30
+*/
 class MyDownloader : public QObject
 {
 

@@ -7,6 +7,12 @@ namespace Ui {
 class IncSearchDialog;
 }
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         承包公司录入图形接口
+* @author        Vaskka
+* @date          2018-7-28
+*/
 class IncSearchDialog : public QDialog
 {
     Q_OBJECT

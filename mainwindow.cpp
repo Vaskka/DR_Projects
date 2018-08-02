@@ -366,8 +366,9 @@ void MainWindow::toSeeInc()
     SelectExecuter sel = SelectExecuter("sys_insurancecomputer");
 
     vector<QuerySet> result = sel.doSelect();
-    this->drawInfoOnTableWidget(result);
     MainWindow::currentTable = "sys_insurancecomputer";
+    this->drawInfoOnTableWidget(result);
+
 }
 
 /**
@@ -378,8 +379,9 @@ void MainWindow::toSeeWarrenty()
     SelectExecuter sel = SelectExecuter("insur_guaranteeslip");
 
     vector<QuerySet> result = sel.doSelect();
+    MainWindow::currentTable = "insur_guaranteeslip";
     this->drawInfoOnTableWidget(result);
-       MainWindow::currentTable = "insur_guaranteeslip";
+
 }
 
 /**
@@ -390,8 +392,9 @@ void MainWindow::toSeeRisk()
     SelectExecuter sel = SelectExecuter("case_reportcaseinfo");
 
     vector<QuerySet> result = sel.doSelect();
+    MainWindow::currentTable = "case_reportcaseinfo";
     this->drawInfoOnTableWidget(result);
-       MainWindow::currentTable = "case_reportcaseinfo";
+
 }
 
 /**
@@ -402,8 +405,9 @@ void MainWindow::toSeeDamage()
     SelectExecuter sel = SelectExecuter("compen_carcompensate");
 
     vector<QuerySet> result = sel.doSelect();
+    MainWindow::currentTable = "compen_carcompensate";
     this->drawInfoOnTableWidget(result);
-           MainWindow::currentTable = "compen_carcompensate";
+
 }
 
 /**
@@ -414,15 +418,15 @@ void MainWindow::toSeeChaim()
     SelectExecuter sel = SelectExecuter("claim_claimmanagmentinfo");
 
     vector<QuerySet> result = sel.doSelect();
+    MainWindow::currentTable = "claim_claimmanagmentinfo";
     this->drawInfoOnTableWidget(result);
-               MainWindow::currentTable = "claim_claimmanagmentinfo";
+
 }
 
 void MainWindow::toSignWarrenty()
 {
     WarrantInsertDialog *warrantInsert = new WarrantInsertDialog(this);
-    // 设置主窗口模态（待实现）
-    /**/
+
     warrantInsert->show();
 }
 
@@ -433,8 +437,7 @@ void MainWindow::toSignRisk()
 {
     CaseInsertDialog *caseInsert = new CaseInsertDialog(this);
 
-    // 设置主窗口模态（待实现）
-    /**/
+
     caseInsert->show();
 }
 
@@ -444,8 +447,7 @@ void MainWindow::toSignRisk()
 void MainWindow::toSignDamage()
 {
     CompenInsertDialog *damageInsert = new CompenInsertDialog(this);
-    // 设置主窗口模态（待实现）
-    /**/
+
     damageInsert->show();
 
 }
@@ -456,8 +458,7 @@ void MainWindow::toSignDamage()
 void MainWindow::toSignClaim()
 {
     ClaimInsertDialog *claimInsert = new ClaimInsertDialog(this);
-    // 设置主窗口模态（待实现）
-    /**/
+
     claimInsert->show();
 }
 
@@ -468,8 +469,6 @@ void MainWindow::toSignInc()
 {
 
     IncInsertDialog *incInsert = new IncInsertDialog(this);
-    // 设置主窗口模态（待实现）
-    /**/
 
     incInsert->show();
 
@@ -481,8 +480,7 @@ void MainWindow::toSignInc()
 void MainWindow::toSearchEmployee()
 {
     EmployeeQueryDialog *que = new EmployeeQueryDialog(this);
-    // 设置主窗口模态（待实现）
-    /**/
+
     que->show();
 
 }

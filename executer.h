@@ -10,6 +10,12 @@
 #include "queryset.h"
 using namespace std;
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         基本执行器
+* @author        Vaskka
+* @date          2018-7-27
+*/
 class Executer
 {
 public:

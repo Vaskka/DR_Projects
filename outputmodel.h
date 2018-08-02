@@ -7,6 +7,13 @@
 #include <string>
 #define OUTPUT_FILE_NAME "output.xlt"
 using namespace std;
+
+/**
+* @projectName   AutomobileInsurance
+* @brief         文件输出模型
+* @author        Vaskka
+* @date          2018-7-30
+*/
 class OutputModel
 {
 public:

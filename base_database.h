@@ -13,7 +13,7 @@ using namespace std;
 * @projectName   AutomobileInsurance
 * @brief         基本数据库工具
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-26
 */
 class base_database
 {

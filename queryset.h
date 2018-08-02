@@ -7,6 +7,12 @@
 #include <map>
 using namespace std;
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         查询结果集
+* @author        Vaskka
+* @date          2018-7-27
+*/
 class QuerySet
 {
 public:

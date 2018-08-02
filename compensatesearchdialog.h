@@ -11,7 +11,7 @@ class CompensateSearchDialog;
 * @projectName   AutomobileInsurance
 * @brief         定损查询图形接口
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-27
 */
 class CompensateSearchDialog : public QDialog
 {

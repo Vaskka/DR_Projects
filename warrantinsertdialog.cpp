@@ -80,7 +80,7 @@ WarrantInsertDialog::WarrantInsertDialog(QWidget *parent) :
 	ui->label_56->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
 
 	ui->label_57->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);border:3px groove grey");
-
+    ui->label_58->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205);");
 
 	ui->Main_CommitButton->setFont(fontText);
 	ui->Main_CommitButton_2->setFont(fontText);
@@ -143,6 +143,7 @@ WarrantInsertDialog::WarrantInsertDialog(QWidget *parent) :
 	ui->label_54->setFont(fontText);
 	ui->label_55->setFont(fontText);
 	ui->label_56->setFont(fontText);
+    ui->label_58->setFont(fontText);
 }
 
 WarrantInsertDialog::~WarrantInsertDialog()

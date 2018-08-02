@@ -12,7 +12,7 @@ class ClaimSearchDialog;
 * @projectName   AutomobileInsurance
 * @brief         理赔查询图形接口
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-27
 */
 class ClaimSearchDialog : public QDialog
 {

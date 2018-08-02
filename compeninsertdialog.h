@@ -11,7 +11,7 @@ class CompenInsertDialog;
 * @projectName   AutomobileInsurance
 * @brief         定损登记图形接口
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-27
 */
 class CompenInsertDialog : public QDialog
 {

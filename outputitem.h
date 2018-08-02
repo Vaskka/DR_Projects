@@ -6,6 +6,13 @@
 #include <string>
 
 using namespace std;
+
+/**
+* @projectName   AutomobileInsurance
+* @brief         文件输出单元
+* @author        Vaskka
+* @date          2018-7-30
+*/
 class OutputItem
 {
 public:

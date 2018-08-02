@@ -7,6 +7,12 @@ namespace Ui {
 class WarrantInsertDialog;
 }
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         保单登记接口
+* @author        Vaskka
+* @date          2018-7-28
+*/
 class WarrantInsertDialog : public QDialog
 {
     Q_OBJECT

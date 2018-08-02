@@ -7,7 +7,7 @@
 * @projectName   AutomobileInsurance
 * @brief         mysql通用删除接口
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-27
 */
 class DeleteExecuter : public Executer
 {

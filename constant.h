@@ -9,7 +9,7 @@ using namespace std;
 * @projectName   AutomobileInsurance
 * @brief         常量和工具集
 * @author        Vaskka
-* @date          2018-7-
+* @date          2018-7-27
 */
 class Constant
 {
