@@ -5,16 +5,40 @@
 #include <string>
 using namespace std;
 
+/**
+* @projectName   AutomobileInsurance
+* @brief         常量和工具集
+* @author        Vaskka
+* @date          2018-7-
+*/
 class Constant
 {
 public:
     Constant();
 
     /* for mysql */
+    /**
+     * @brief host mysql ip
+     */
     static string host;
+
+    /**
+     * @brief password mysql 密码
+     */
     static string password;
+
+    /**
+     * @brief port mysql 端口号
+     */
     static int port;
+
+    /**
+     * @brief user mysql 用户名
+     */
     static string user;
+    /**
+     * @brief database mysql 数据库名
+     */
     static string database;
 
 
@@ -103,6 +127,11 @@ public:
     static bool checkFloat(string fl);
 
 private:
+    /**
+     * @brief routeToConf 读取配置文件路由到相应的变量
+     * @param key 变量的key
+     * @param value 变量的值
+     */
     static void routeToConf(QString key, QString value);
 };
 

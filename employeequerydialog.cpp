@@ -100,8 +100,9 @@ void EmployeeQueryDialog::on_Admin_Query_clicked()
 
     vector<QuerySet> result = sel.doSelect();
 
-    ((MainWindow*) (this->parentWidget()))->drawInfoOnTableWidgetWithOperator(result);
     MainWindow::currentTable = "sys_employeeinfo";
+    ((MainWindow*) (this->parentWidget()))->drawInfoOnTableWidgetWithOperator(result);
+
     this->hide();
 
 }

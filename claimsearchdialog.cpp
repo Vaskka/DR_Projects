@@ -77,8 +77,8 @@ void ClaimSearchDialog::on_pushButton_clicked()
 //        q.L();
 //    }
 
-
-    ((MainWindow*)(this->parentWidget()))->drawInfoOnTableWidgetWithOperator(result);
     MainWindow::currentTable = "claim_claimmanagmentinfo";
+    ((MainWindow*)(this->parentWidget()))->drawInfoOnTableWidgetWithOperator(result);
+
     this->hide();
 }

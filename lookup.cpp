@@ -5,7 +5,6 @@
 LookUp::LookUp()
 {
     cMap.insert(pair<string, string>("id", "id"));
-    cMap.insert(pair<string, string>("Id", "id"));
     cMap.insert(pair<string, string>("CaseNumber", "案件编号"));
     cMap.insert(pair<string, string>("PlateNumber", "车牌号"));
     cMap.insert(pair<string, string>("ReportingUnitOrIndividual", "报案单位或个人"));
@@ -20,7 +19,6 @@ LookUp::LookUp()
     cMap.insert(pair<string, string>("DamageExpectancy", "估计损失"));
     cMap.insert(pair<string, string>("ActualClaimAmount", "实际理赔金额"));
     cMap.insert(pair<string, string>("TypeOfInsurance", "保险种类"));
-    cMap.insert(pair<string, string>("ComputerCode", "承保公司编号"));
     cMap.insert(pair<string, string>("ClaimState", "理赔状态"));
     cMap.insert(pair<string, string>("Telephone", "联系电话"));
     cMap.insert(pair<string, string>("Insurant", "被保险人"));
@@ -105,6 +103,12 @@ LookUp::LookUp()
     cMap.insert(pair<string, string>("CompanyName", "承保公司名称"));
     cMap.insert(pair<string, string>("CompanyCode", "承保公司编号"));
     cMap.insert(pair<string, string>("WarrantNumber", "保单编号"));
+    cMap.insert(pair<string, string>("case_reportcaseinfo", "出险信息"));
+    cMap.insert(pair<string, string>("claim_claimmanagmentinfo", "理赔信息"));
+    cMap.insert(pair<string, string>("compen_carcompensate", "定损信息"));
+    cMap.insert(pair<string, string>("insur_guaranteeslip", "保单信息"));
+    cMap.insert(pair<string, string>("sys_employeeinfo", "员工信息"));
+    cMap.insert(pair<string, string>("sys_insurancecomputer", "承保公司信息"));
 }
 
 
@@ -112,6 +116,12 @@ LookUp::~LookUp()
 {
 }
 
+
+/**
+ * @brief iterator 根据字段映射翻译
+ * @param ziDuan 字段
+ * @return 翻译Unicode
+ */
 string LookUp::iterator(string ziDuan)
 {
     map<string, string>::iterator it;
@@ -124,3 +134,23 @@ string LookUp::iterator(string ziDuan)
     }
     return ziDuan;
 }
+
+/**
+ * @brief deIterator 根据翻译映射字段
+ * @param trans 翻译Unicode
+ * @return 字段
+ */
+string LookUp::deIterator(string trans)
+{
+    map<string, string>::iterator it;
+    for (it = cMap.begin(); it != cMap.end(); it++)
+    {
+        if (!trans.compare((*it).second))
+        {
+            return ((*it).first);
+        }
+    }
+    return trans;
+}
+
+

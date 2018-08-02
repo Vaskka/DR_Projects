@@ -3,12 +3,21 @@
 
 #include "executer.h"
 
-// over test
+/**
+* @projectName   AutomobileInsurance
+* @brief         mysql通用删除接口
+* @author        Vaskka
+* @date          2018-7-
+*/
 class DeleteExecuter : public Executer
 {
 public:
     DeleteExecuter(string table);
 
+    /**
+     * @brief doDelete 执行删除
+     * @return
+     */
     QueryResult doDelete();
 };
 

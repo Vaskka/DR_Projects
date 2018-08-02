@@ -52,6 +52,12 @@ public:
     map<string, string>::iterator getEnd();
 
     /**
+     * @brief remove 移除某个键值映射
+     * @param key
+     */
+    bool remove(string key);
+
+    /**
      * @brief L for debug
      */
     void L();

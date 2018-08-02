@@ -152,7 +152,7 @@ void ClaimInsertDialog::on_Insert_Commit_clicked()
     sel.filter.addFilter("PlateNumber", carNumber);
     vector<QuerySet> result = sel.doSelect();
     if (result.size() < 1) {
-        QMessageBox::information(this, "Opps!", "请先填写当前车的出险信息", QMessageBox::Ok, QMessageBox::Yes);
+        QMessageBox::information(this, "Opps!", "请先填写当前车的出险信息", QMessageBox::Ok);
         return ;
     }
 
@@ -160,9 +160,10 @@ void ClaimInsertDialog::on_Insert_Commit_clicked()
     SelectExecuter anotherSel = SelectExecuter("compen_carcompensate");
 
     anotherSel.filter.addFilter("PlateNumber", carNumber);
-    vector<QuerySet> anotherResult = sel.doSelect();
+    vector<QuerySet> anotherResult = anotherSel.doSelect();
+
     if (anotherResult.size() < 1) {
-        QMessageBox::information(this, "Opps!", "请先填写当前车的定损信息", QMessageBox::Ok, QMessageBox::Yes);
+        QMessageBox::information(this, "Opps!", "请先填写当前车的定损信息", QMessageBox::Ok);
         return ;
     }
 
@@ -173,13 +174,13 @@ void ClaimInsertDialog::on_Insert_Commit_clicked()
     data.setValue("PlateNumber", carNumber);
     data.setValue("CaseNumber", caseNumber);
     data.setValue("DateOfAcceptance", date);
-    data.setValue("DamageExpectancy", damage);
+    data.setValue("DamageExpectancy", lose);
     data.setValue("ActualClaimAmount", cost);
     data.setValue("TypeOfInsurance", claimStatus);
-    data.setValue("ComputerCode", incNumber);
+    data.setValue("CompanyCode", incNumber);
     data.setValue("ClaimState", status);
     data.setValue("Telephone", tel);
-    data.setValue("Insurant", person);
+    data.setValue("InsurancedPerson", person);
 
     data.setValue("ThreeOwnerOfResponsibilitycompany", third);
     data.setValue("ClaimDescription", damage);

@@ -56,9 +56,9 @@ void CaseSearchDialog::on_pushButton_clicked()
     // 得到结果是一组结果集的向量
     vector<QuerySet> result = sel.doSelect();
 
-
-    ((MainWindow*)(this->parentWidget()))->drawInfoOnTableWidgetWithOperator(result);
     MainWindow::currentTable = "case_reportcaseinfo";
+    ((MainWindow*)(this->parentWidget()))->drawInfoOnTableWidgetWithOperator(result);
+
     this->hide();
 }
 

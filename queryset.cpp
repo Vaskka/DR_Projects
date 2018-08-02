@@ -105,6 +105,23 @@ map<string, string>::iterator QuerySet::getEnd()
 }
 
 /**
+ * @brief QuerySet::remove 移除某个键值映射
+ * @param key
+ * @return 成功返回true 失败返回false
+ */
+bool QuerySet::remove(string key)
+{
+    map<string,string>::iterator iter;
+    iter = this->dict.find(key);
+    if(iter == this->dict.end()){
+        return false;
+    }
+    this->dict.erase(iter);
+    return true;
+}
+
+
+/**
  * @brief QuerySet::L debug
  */
 void QuerySet::L()

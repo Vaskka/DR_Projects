@@ -40,11 +40,12 @@ MainWindow::MainWindow(QWidget *parent, User* user) :
 	QFont fontText("Microsoft YaHei", 8, 75);
 
     ui->Main_InfoShowTable->setStyleSheet("background-color:rgb(245,245,245);color:rgb(0,0,0)");
-	ui->label->setStyleSheet("background-color:rgb(102,139,139)");
+    //ui->label->setStyleSheet("background-color:rgb(102,139,139)");
 	ui->Main_DeleteSelectionButton->setFont(fontText);
 	ui->Main_SaveChangeButton->setFont(fontText);
 	ui->Main_TableTitle->setFont(fontTitle);
 	ui->Main_TableTitle->setStyleSheet("background-color:rgb(102,139,139);color:rgb(255,250,205)");
+
 
 }
 
@@ -133,6 +134,8 @@ void MainWindow::drawInfoOnTableWidget(vector<QuerySet> info)
 
     // 不可显示更改按钮
     this->unShowChangeButton();
+    // 改变标题
+    this->ui->Main_TableTitle->setText((trans.iterator(MainWindow::currentTable) + "查询结果").c_str());
 }
 
 /**
@@ -158,6 +161,7 @@ void MainWindow::drawInfoOnTableWidgetWithOperator(vector<QuerySet> info)
             ui->Main_InfoShowTable->item(i, cols - 1)->setFlags((ui->Main_InfoShowTable->item(i, cols - 1)->flags()) & (~Qt::ItemIsEditable));
         }
     }
+
 }
 
 /**
@@ -551,7 +555,7 @@ void MainWindow::on_Main_SaveChangeButton_clicked()
 
     /* 检查数据正确与否 */
     /**/
-
+    LookUp trans;
 
 
     // 行数和列数
@@ -581,7 +585,6 @@ void MainWindow::on_Main_SaveChangeButton_clicked()
     }
 
     // 执行更新
-
     bool isOk = true;
     string reason = "";
     for (int i = 0; i < rows; i++)
@@ -592,7 +595,7 @@ void MainWindow::on_Main_SaveChangeButton_clicked()
 
             if (ui->Main_InfoShowTable->item(i, j))
             {
-                data.setValue(fieldList[j], ui->Main_InfoShowTable->item(i, j)->text().toStdString());
+                data.setValue(trans.deIterator(fieldList[j]), ui->Main_InfoShowTable->item(i, j)->text().toStdString());
             }
 
         }

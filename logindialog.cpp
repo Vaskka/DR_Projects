@@ -111,7 +111,17 @@ void LoginDialog::on_Login_LoginButton_clicked()
 
 void LoginDialog::on_Login_Quit_clicked()
 {
-    qApp->quit();
+    int button;
+    button = QMessageBox::question(this, tr("退出程序"),
+                                   QString(tr("确认退出程序?")),
+                                   QMessageBox::Yes | QMessageBox::No);
+    if (button == QMessageBox::No) {
+          return;
+    }
+    else if (button == QMessageBox::Yes) {
+          qApp->quit();
+    }
+
 }
 
 
